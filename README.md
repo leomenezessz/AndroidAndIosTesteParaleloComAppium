@@ -147,44 +147,41 @@ public CalculatorScreen(AppiumDriver<MobileElement> driver)  {
 
 Reparem nas annotations, dentro delas especificamos qual será o nosso locator, temos os locators separados tanto do android como o do ios em apenas uma variavel! Visivelmente não temos aquele findElement(By())... Consegue visualizar a abstração da nossa page? Agora vamos finalizar nossa classe criando os métodos com as ações da page.
 
-
 ```Java
-	public CalculatorScreen fillFirstNumber(String number) {
+public CalculatorScreen fillFirstNumber(String number) {
 		inputFirstNumber.click();
 		inputFirstNumber.clear();
 		driver.getKeyboard().sendKeys(number);
 		return this;
 	}
 
-	public CalculatorScreen fillSecondNumber(String number) {
+public CalculatorScreen fillSecondNumber(String number) {
 		inputSecondNumber.click();
 		inputSecondNumber.clear();
 		driver.getKeyboard().sendKeys(number);
 		return this;
 	}
 
-	public CalculatorScreen closeKeyboard() {
+public CalculatorScreen closeKeyboard() {
 		driver.getKeyboard().pressKey(Keys.RETURN);
 		return this;
 	}
 
-	public String operationResult() {
+public String operationResult() {
 		return resultText.getText().toString().trim();
 	}
 
-	public void quitDriver() {
+public void quitDriver() {
 		driver.quit();
-	}
-  ```
+	} 	
+```  
+
+Beleza! Vamos criar as duas classes de teste para android e ios, dentro do pacote **src/test/java/meu-pacote-de-tests**
 
 
-  Beleza! Vamos criar as duas classes de teste para android e ios, dentro do pacote **src/test/java/meu-pacote-de-tests**
+ * **Classe de Teste Android**
 
-
-  * **Classe de Teste Android**
-	
-
-  ```Java
+```Java
   public class TestAndroidCalculator {
 
 	private static CalculatorScreen calculatorScreen;
@@ -215,9 +212,7 @@ Reparem nas annotations, dentro delas especificamos qual será o nosso locator, 
 }
 ```
 
-
 * **Classe de Teste IOS**
-
 
 ```Java
 public class TestIosCalculator {
