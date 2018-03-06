@@ -15,11 +15,11 @@ Vamos primeiramente criar o nosso projeto de testes, abra sua IDE, e crie um pro
 
 ```File > New > Maven > Maven Project (Eclipse)```
 
-![alt text](/Users/leonardomenezes/eclipse-workspace/crossTests/imagens/Projeto-Maven-Eclipse.png "Novo Projeto Maven")
+![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Projeto-Maven-Eclipse.png "Novo Projeto Maven")
 
 Escolha **maven-archetype-quickstart 1.1**, para gerar um projeto mais o simples possível.
 
-![alt text](/Users/leonardomenezes/eclipse-workspace/crossTests/imagens/Arquitetura-Projeto.png "Tipo Arquitetura")
+![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Arquitetura-Projeto.png "Tipo Arquitetura")
 
 Perfeito, agora vamos no nosso arquivo **pom.xml** e vamos adicionar todas as dependências e plugins que vamos usar no nosso projeto.
 
@@ -69,12 +69,12 @@ Depois da configuração do **pom.xml**, vamos criar um diretório que vamos col
 
 ```File > New > Folder > [folder-name]```
 
-![alt text](/Users/leonardomenezes/eclipse-workspace/crossTests/imagens/Nova-Pasta.png "Tela Criação de Pastas")
+![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Nova-Pasta.png "Tela Criação de Pastas")
 
 Vou colocar aqui também os arquivos dos app para donwload:
 
-* [APK-ANDROID](https://www.google.com)
-* [APP-IOS](https://www.google.com)
+* [APK-ANDROID](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/raw/master/apps/app-android-calculator.apk)
+* [APP-IOS](https://drive.google.com/open?id=1A8Kw9AFb0SQTjb-dlOY16W1Y0FwBP-70)
 
 Faço o donwload deles e jogue na pasta que vc acabou de criar!
 
@@ -86,7 +86,7 @@ Ufa, depois de todas essas configuraçoes podemos começar a criar nossas clases
 
  ```File > New > Package > [package-name]```
 
-![alt text](/Users/leonardomenezes/eclipse-workspace/crossTests/imagens/Package-Screen.png "Tela Criação de Pastas")
+![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Package-Screen.png "Tela Criação de Pastas")
 
 E dentro deste pacote vamos criar a classe screen que vai contemplar todos elementos da tela da nossa aplicação.
 
@@ -101,9 +101,11 @@ public CalculatorScreen(AppiumDriver<MobileElement> driver)  {
   }
 
 }
-```
+``` 
+
 
 Esse é o inicio da nossa classe e a parte mais importante rsrsrs, o PageFactory responsavél por buscar todos os meus elementos em tela, para isso precisamos de uma instancia do nosso driver e do contexto da page. Criamos o PageFactory no meu construtor porque sempre criar uma instancia da minha CalculatorScreen ele vai buscar todos os seu elementos com o driver especifico que recebermos no construtor. Agora vamos pegar os elementos da tela, não vou mostrar como fazer isso aqui e nem como configurar os emuladores mais posso ajudar com os links, existem diversas ferramentas para isso!
+
 
 ### Inspetores de tela
 
@@ -112,6 +114,7 @@ Esse é o inicio da nossa classe e a parte mais importante rsrsrs, o PageFactory
 * [Arc](https://github.com/appium/ruby_console)
 
 E depois de pegar os elementos podemos atualizar nossa page, e agora temos esse resultado :
+
 
 ```Java
 public class CalculatorScreen {
@@ -138,10 +141,12 @@ public CalculatorScreen(AppiumDriver<MobileElement> driver)  {
 	@AndroidFindBy(id = "android_field_second_number")
 	@iOSFindBy(accessibility = "apple_second_input")
 	private RemoteWebElement inputSecondNumber;
-}```  
+}
+```
 
 
 Reparem nas annotations, dentro delas especificamos qual será o nosso locator, temos os locators separados tanto do android como o do ios em apenas uma variavel! Visivelmente não temos aquele findElement(By())... Consegue visualizar a abstração da nossa page? Agora vamos finalizar nossa classe criando os métodos com as ações da page.
+
 
 ```Java
 	public CalculatorScreen fillFirstNumber(String number) {
@@ -171,10 +176,13 @@ Reparem nas annotations, dentro delas especificamos qual será o nosso locator, 
 		driver.quit();
 	}
   ```
-  
+
+
   Beleza! Vamos criar as duas classes de teste para android e ios, dentro do pacote **src/test/java/meu-pacote-de-tests**
 
+
   * **Classe de Teste Android**
+	
 
   ```Java
   public class TestAndroidCalculator {
@@ -207,7 +215,9 @@ Reparem nas annotations, dentro delas especificamos qual será o nosso locator, 
 }
 ```
 
+
 * **Classe de Teste IOS**
+
 
 ```Java
 public class TestIosCalculator {
@@ -240,20 +250,26 @@ public class TestIosCalculator {
 }
 ```
 
+
 Os casos de teste são bem simples, estão apenas verificando se a aplicação está realizando corretamente o fluxo da soma. Especifiquei também o capabilities de cada dispositivo, e vou deixar um link aqui explicando o
 que faz cada capabilitie.
 
-Show, agora já podemos rodar os testes. Inicie seu emulador android (não precisa iniciar o simulador ios) e inicie o appium como de costume com o comando
+Show, agora já podemos rodar os testes. Inicie seu emulador android (não precisa iniciar o simulador ios) e inicie o appium como de costume com o comando :
+
 
 ```Console
 $ appium
 ```
 
+
 Prontinho agora só rodar os testes, no meu caso rodei direto com o junit clicando com o direito na classe da executando um **Run as > Junit Test**.
 
-![alt text](/Users/leonardomenezes/eclipse-workspace/crossTests/imagens/Junit-Run.png "Execução Junit")
+
+![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Junit-Run.png "Execução Junit")
+
 
 No proximo post vou focar no selenium grid e como vamos fazer nossa estrutura atual rodar em paralelo no selenium grid.
+
 
 Obrigado <3
 
