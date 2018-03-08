@@ -5,7 +5,7 @@ Estive estudando um pouco sobre como rodar testes em paralelo e a minha maior cu
 ## Ferramentas necessárias para configuração inicial dos testes.
 
 * **Configuração Android Home** - https://gist.github.com/ericaroy/d08a846daeebe145d2ef
-* **Configuração Javajava home Home** - https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
+* **Configuração Java Home** - https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
 * **Eclipse ou IDE de preferencia** - https://www.eclipse.org/downloads/
 * **Java 8** - https://www.java.com/pt_BR/download/
 * **Appium** - http://appium.io/
