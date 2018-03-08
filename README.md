@@ -273,7 +273,7 @@ $ mvn clean test
 
 Tcharannn!!
 
-![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Success-Test.png "Test Success")
+![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Success-Tests.png "Test Success")
 
 
 Foi executado um teste de cada vez, próximo post vou focar no selenium grid e como vamos fazer nossa estrutura atual rodar em paralelo no selenium grid.
