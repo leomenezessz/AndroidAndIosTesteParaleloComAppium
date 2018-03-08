@@ -1,9 +1,11 @@
-# Estudo de testes em paralelo com Appium, Selenium grid e Java.
+# Rodando testes em paralelo com Appium, Selenium Grid e Java: Parte 1
 
 Estive estudando um pouco sobre como rodar testes em paralelo e a minha maior curiosidade era como poderia executar testes em paralelo para diferentes tipos de plataforma. Para isso tive que entender e estudar o funcionamento de algumas ferramentas antes. Nesta série quero compartilhar minha experiência com vocês de como eu fiz isso, e fazer um tutorial um pouco mais mastigado pra vocês, para que no tenham tantos problemas quanto eu e veja que testar em paralelo não é um bicho de sete cabeças!
 
 ## Ferramentas necessárias para configuração inicial dos testes.
 
+* **Configuração Android Home** - https://gist.github.com/ericaroy/d08a846daeebe145d2ef
+* **Configuração Javajava home Home** - https://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
 * **Eclipse ou IDE de preferencia** - https://www.eclipse.org/downloads/
 * **Java 8** - https://www.java.com/pt_BR/download/
 * **Appium** - http://appium.io/
@@ -111,7 +113,7 @@ Esse é o início da nossa classe e a parte mais importante rsrsrs, o PageFactor
 ### Cofigurando Emuladores
 
 * [Genymotion Emulador Android](https://www.genymotion.com/)
-* [Android Studio Criando AVD](https://developer.android.com/studio/run/managing-avds.html?hl=pt-br)
+* [Android Studio AVD](https://developer.android.com/studio/run/managing-avds.html?hl=pt-br)
 * [Para IOS eu indico realmente instalar o Xcode!!](https://developer.apple.com/xcode/)
 
 ### Inspetores de tela
