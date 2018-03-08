@@ -265,20 +265,24 @@ $ appium
 ```
 
 
-Prontinho agora só rodar os testes, para isso vamos aproveitar e usar o maven
+Prontinho agora só rodar os testes, para isso vamos aproveitar e usar o maven! Dentro do diretório **AndroidAndIosTesteParaleloComAppium/** execute o comando :
 
 ```
 $ mvn clean test
 ```
 
+Tcharannn!!
 
-No próximo post vou focar no selenium grid e como vamos fazer nossa estrutura atual rodar em paralelo no selenium grid.
+![alt text](https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium/blob/master/imagens/Success-Test.png "Test Success")
+
+
+Foi executado um teste de cada vez, próximo post vou focar no selenium grid e como vamos fazer nossa estrutura atual rodar em paralelo no selenium grid.
 
 
 Obrigado <3
 
 
-### Refrencias
+### Refrências
 
 * **Repositorio deste Projeto :** https://github.com/menezes-ssz/AndroidAndIosTesteParaleloComAppium
 * **Appium capabilities :** https://appium.io/docs/en/writing-running-appium/caps/
