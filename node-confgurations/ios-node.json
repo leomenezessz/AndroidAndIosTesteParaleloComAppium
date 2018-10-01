@@ -1,0 +1,26 @@
+{
+    "capabilities": [
+        {
+            "browserName": "safari",
+            "technologyPreview": false,
+            "version": "11.0",
+            "platform": "MAC",
+            "platformName": "ios",
+            "maxInstances": 1,
+            "seleniumProtocol": "WebDriver"
+        }
+    ],
+    "configuration": {
+        "cleanUpCycle": 2000,
+        "timeout": 10800,
+        "url": "http://127.0.0.1:4455/wd/hub",
+        "host": "127.0.0.1",
+        "port": 4455,
+        "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+        "maxSession": 1,
+        "register": true,
+        "registerCycle": 5000,
+        "hubPort": 4444,
+        "hubHost": "127.0.0.1"
+    }
+}

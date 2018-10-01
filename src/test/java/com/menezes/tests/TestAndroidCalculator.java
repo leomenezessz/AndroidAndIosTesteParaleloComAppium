@@ -28,7 +28,7 @@ public class TestAndroidCalculator {
 	    	capabilities.setCapability("deviceName","Android Emulator API 22");
 	    	capabilities.setCapability("unicodeKeyboard", true);
 		capabilities.setCapability("disableAndroidWatchers" , true);
-	    	appiumDriver = new AndroidDriver<MobileElement>(new URL("http://localhost:4723/wd/hub") , capabilities);
+	    	appiumDriver = new AndroidDriver<MobileElement>(new URL("http://localhost:4444/wd/hub") , capabilities);
 	    	calculatorScreen = new CalculatorScreen(appiumDriver);
 	}
 	

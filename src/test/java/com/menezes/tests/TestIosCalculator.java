@@ -30,7 +30,7 @@ public class TestIosCalculator {
 	    	capabilities.setCapability("plataformName", "ios" );
 	    	capabilities.setCapability("deviceName", "iPhone SE");
 	 	capabilities.setCapability("automationName" , "XCUITest");
-		appiumDriver = new IOSDriver<MobileElement>(new URL("http://localhost:4723/wd/hub") , capabilities);
+		appiumDriver = new IOSDriver<MobileElement>(new URL("http://localhost:4444/wd/hub") , capabilities);
 		calculatorScreen = new CalculatorScreen(appiumDriver);
 	}
 	
