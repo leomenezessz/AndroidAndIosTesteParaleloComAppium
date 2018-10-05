@@ -34,21 +34,19 @@ public class CalculatorScreen {
 	private MobileElement inputSecondNumber;
 
 	public CalculatorScreen fillFirstNumber(String number) {
-		inputFirstNumber.click();
 		inputFirstNumber.clear();
-		driver.getKeyboard().sendKeys(number);
+		inputFirstNumber.sendKeys(number);
 		return this;
 	}
 	
 	public CalculatorScreen fillSecondNumber(String number) {
-		inputSecondNumber.click();
 		inputSecondNumber.clear();
-		driver.getKeyboard().sendKeys(number);
+		inputSecondNumber.sendKeys(number);
 		return this;
 	}
 	
 	public CalculatorScreen closeKeyboard() {
-		driver.getKeyboard().pressKey(Keys.RETURN);
+		driver.hideKeyboard();
 		return this;
 	}
 	

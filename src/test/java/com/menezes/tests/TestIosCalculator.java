@@ -26,9 +26,7 @@ public class TestIosCalculator {
 	public static void setup() throws MalformedURLException {
 	    DesiredCapabilities capabilities = new DesiredCapabilities();
 	    capabilities.setCapability("app",new File("apps/SimpleCalculator.app"));
-	    	capabilities.setCapability("plataform", "MAC" );
-	    	capabilities.setCapability("plataformName", "ios" );
-	    	capabilities.setCapability("deviceName", "iPhone SE");
+	    capabilities.setCapability("deviceName", "iPhone SE");
 	 	capabilities.setCapability("automationName" , "XCUITest");
 		appiumDriver = new IOSDriver<MobileElement>(new URL("http://localhost:4444/wd/hub") , capabilities);
 		calculatorScreen = new CalculatorScreen(appiumDriver);
